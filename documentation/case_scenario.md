@@ -18,8 +18,7 @@ The platform follows a peer-to-peer model, empowering users to handle transactio
 2. **Booking System**: End-to-end booking management, from inquiry to confirmation, including payment processing
 3. **User Verification**: Identity verification services to enhance trust within the community
 4. **Messaging System**: Built-in secure communication between owners and renters
-5. **Review & Rating System**: Transparent feedback mechanism for both properties and users
-6. **Smart Search**: Location-based property discovery with multiple filtering options
+5. **Smart Search**: Location-based property discovery with multiple filtering options
 
 ### Target Market
 RentMate targets multiple segments:
@@ -40,11 +39,11 @@ RentMate targets multiple segments:
 - Role-based access (owner/renter)
 
 #### Property Management
-- Property listing creation with multilingual support
+- Property listing creation
 - Photo uploading and management
 - Amenity specification and categorization
 - Availability calendar integration
-- Pricing management (including seasonal adjustments)
+- Pricing management
 
 #### Booking System
 - Booking request and confirmation workflow
@@ -94,18 +93,3 @@ RentMate targets multiple segments:
 4. **Availability**: 99.9% uptime for core services
 5. **Localization**: Support for multiple languages and currencies
 6. **Accessibility**: Compliance with WCAG 2.1 guidelines
-
-## Contract Notes
-
-This document serves as an agreement between the client (RentMate stakeholders) and the development team. The development will proceed in phases:
-
-1. **Phase 1**: Core user management, property listing, and basic search functionality
-2. **Phase 2**: Booking system, messaging, and payment integration
-3. **Phase 3**: Review system, advanced search, and API integrations
-4. **Phase 4**: Optimization, localization, and accessibility improvements
-
-Each phase will be evaluated against the requirements specified in this document, with regular client reviews at the completion of each phase. All intellectual property developed during this project will belong to RentMate, with appropriate credit to third-party libraries and services used.
-
-[Client Signature] _________________________ Date: _________
-
-[Development Team] _________________________ Date: _________
