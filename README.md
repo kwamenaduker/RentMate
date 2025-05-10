@@ -123,20 +123,11 @@ The `/documentation` directory contains detailed information about the project:
 - `case_scenario.md`: Project background and requirements
 - `architecture_design.md`: Application architecture and design details
 - `implementation.md`: Implementation details and technology choices
-- `video_demo_script.md`: Script for the demonstration video
 
 ## Submission Materials
-
-This project is submitted as part of a mobile application development assignment with the following components:
+This project is submitted as a mobile application development final assignment with the following components:
 
 1. **Source Code**: The full RentMate application codebase
 2. **Documentation**: Comprehensive documentation in the `/documentation` directory
 3. **APK**: Android application package for installation
-4. **Demo Video**: YouTube video demonstrating all features (link in submission report)
-
-## Acknowledgements
-
-- Flutter team for the amazing framework
-- Firebase for backend services
-- WeatherAPI.com for weather forecast data
-- All contributors who have helped improve this project
+4. **Demo Video**: YouTube video demonstrating all features:
