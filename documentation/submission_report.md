@@ -20,7 +20,6 @@ This submission includes:
    - `case_scenario.md`: Detailed case study and requirements
    - `architecture_design.md`: Application architecture and design specifications
    - `implementation.md`: Implementation details and technology choices
-   - `video_demo_script.md`: Script for demonstration video
    - `README.md`: Project overview and setup instructions
 
 3. **APK File**: Android application package for installation and testing
