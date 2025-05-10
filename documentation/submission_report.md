@@ -69,7 +69,7 @@ This architecture ensures maintainability, testability, and scalability as the a
 
 ## GitHub Repository
 
-The complete source code is available at: [GitHub Repository Link: https://github.com/your-username/rent_mate](#)
+The complete source code is available at: [[GitHub Repository Link: https://github.com/your-username/rent_mate](#)](https://github.com/kwamenaduker/RentMate.git)
 
 ## UI Prototype
 
