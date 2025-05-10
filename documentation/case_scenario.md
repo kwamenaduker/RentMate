@@ -10,7 +10,6 @@ RentMate operates as a two-sided marketplace with:
 
 1. **Property Owners**: Individuals who have rental properties, rooms, or spaces available
 2. **Renters**: Individuals seeking short-term or long-term accommodations
-3. **Platform Administrators**: Team managing the application, ensuring quality and resolving disputes
 
 The platform follows a peer-to-peer model, empowering users to handle transactions directly while providing the technological infrastructure to facilitate secure and reliable interactions.
 
