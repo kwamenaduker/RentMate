@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "827150327810",
+    "project_id": "roommatch-458521",
+    "storage_bucket": "roommatch-458521.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827150327810:android:251c2339ea49e54506c71b",
+        "android_client_info": {
+          "package_name": "com.rentmate.rent_mate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD97rcYDuLVYcyTM2jHggFMdg3xMlKLpws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,76 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // TEMPORARY TEST RULE - REMOVE AFTER DEBUGGING
+    // Allow all operations for all authenticated users
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    // Users collection rules
+    match /users/{userId} {
+      // Allow read if user is logged in and the document belongs to them
+      allow read: if request.auth != null && request.auth.uid == userId;
+      
+      // Allow create if the user is authenticated and the document ID matches their auth ID
+      allow create: if request.auth != null && request.auth.uid == userId;
+      
+      // Allow update if the user is authenticated and the document ID matches their auth ID
+      allow update: if request.auth != null && request.auth.uid == userId;
+      
+      // Disallow delete operations for users
+      allow delete: if false;
+    }
+    
+    // Listings collection rules
+    match /listings/{listingId} {
+      // Allow read for anyone (listings are public)
+      allow read: if true;
+      
+      // Allow create if the user is authenticated and they set themselves as the owner
+      allow create: if request.auth != null && 
+                    request.resource.data.ownerId == request.auth.uid;
+      
+      // Allow update if the user is authenticated and they are the owner
+      allow update: if request.auth != null && 
+                    resource.data.ownerId == request.auth.uid;
+      
+      // Allow delete if the user is authenticated and they are the owner
+      allow delete: if request.auth != null && 
+                    resource.data.ownerId == request.auth.uid;
+    }
+    
+    // Conversations collection rules
+    match /conversations/{conversationId} {
+      // TEMPORARILY MORE PERMISSIVE: Allow any authenticated user to read conversations
+      allow read: if request.auth != null;
+      
+      // TEMPORARILY MORE PERMISSIVE: Allow any authenticated user to create conversations
+      allow create: if request.auth != null;
+      
+      // Allow update if the user is authenticated and is a participant
+      allow update: if request.auth != null && 
+                    request.auth.uid in resource.data.participants;
+      
+      // Allow delete if the user is authenticated and is a participant
+      allow delete: if request.auth != null && 
+                    request.auth.uid in resource.data.participants;
+      
+      // Messages subcollection rules
+      match /messages/{messageId} {
+        // TEMPORARY FIX: Allow read if user is logged in (more permissive)
+        allow read: if request.auth != null;
+        
+        // Allow create if user is logged in and sets themselves as sender
+        allow create: if request.auth != null && 
+                      request.resource.data.senderId == request.auth.uid;
+        
+        // TEMPORARY FIX: Allow update if user is logged in
+        allow update: if request.auth != null;
+        
+        // TEMPORARY FIX: Still don't allow message deletion
+        allow delete: if false;
+      }
+    }
+  }
+}
